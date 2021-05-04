@@ -1,7 +1,10 @@
 from django.urls import include, path
 
+
 urlpatterns = [
-    path('', include('homepage.urls'))
-    # Тут должен быть path(), который при обращении к главной странице
-    # переадресует запрос в файл urls.py из директории homepage
+    path('', include('homepage.urls')),
+    
+    path('icecream/', include('icecream.urls'))
+    # подключить urls.py из директории icecream? Легче лёгкого!
+    # не забудьте поставить закрывающий / в конце адреса
 ]
